@@ -1,6 +1,6 @@
 
 
-interface Producto{
+export interface Producto{
     desc : string,
     precio : number
 }
@@ -19,7 +19,7 @@ const tablet : Producto = {
 }
 
 
-function calcularIva(productos : Producto[]):number {
+ function calcularIva(productos : Producto[]):number {
 
     let total = 0;
     productos.forEach((producto)=>{
@@ -40,7 +40,7 @@ console.log('total iva: ' + totIva);
 
 
 
-function calcularIVA(productos : Producto[]):[number,number] {
+export function calcularIVA(productos : Producto[]):[number,number] {
 
     let total = 0;
     productos.forEach(({precio})=>{
