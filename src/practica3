@@ -1,0 +1,48 @@
+class sumar {
+  private numero: number;
+  private veces: number;
+
+  setNumero(a: number) {
+    this.numero = a;
+  }
+
+  getNumero(): Number {
+    return this.numero;
+  }
+
+  setVeces(a: number) {
+    this.veces = a;
+  }
+
+  getVeces(): Number {
+    return this.veces;
+  }
+
+
+  calcular() : void {
+
+    let total : number =  0;
+    let texto : string = '';
+    for (let index = 0; index < this.veces; index++) {
+
+        if (index == (this.veces - 1 )) {
+        texto += `${this.numero} `;
+            
+        }else{
+        texto += `${this.numero} + `;
+
+        }
+        total += this.numero
+    }
+
+    console.log(`res: ${texto} =  ${total}`);
+    
+  }
+}
+
+
+let suma1 = new sumar();
+suma1.setNumero(80);
+suma1.setVeces(3);
+suma1.calcular();
+
